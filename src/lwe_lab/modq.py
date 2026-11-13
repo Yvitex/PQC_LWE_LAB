@@ -19,3 +19,11 @@ def centered(x: int, q: int) -> int:
     return np.where(r > q // 2, r - q, r) # means if r is greater than half a q, return r-q, else, r
 
 
+# the inversion of a clock is not mere x^-1. It needs mod q.
+# For example if x = 2, but the inverse of 2 is 0.5. But 0.5 is not in the clock of mod q.
+# So the equation that we use is 2 * i = where i mod q = 1
+def inv_mod(x, q):
+    return pow(x, -1, q)
+# is already provided by pow
+
+
